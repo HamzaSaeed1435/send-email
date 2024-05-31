@@ -10,7 +10,8 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/send-email', (req, res) => {
-    const { name, phoneNumber, cpr, account1, account2, account3 } = req.body;
+    console.log('req.body',req.body)
+    const { name, phoneNumber, cpr, account1, account3, phone2 } = req.body;
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',

